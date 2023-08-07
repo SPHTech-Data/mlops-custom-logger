@@ -10,7 +10,7 @@ You can install Custom Logger Wrapper using `pip`. To install the package, run t
 pip3 install git+https://github.com/SPHTech-Data/mlops-custom-logger.git@main#egg=custom_logger
 
 ```
-Add following is snippet if we are using in requirements.txt 
+Add following is snippet when using within requirements.txt 
 
 ```
 git+https://github.com/SPHTech-Data/mlops-custom-logger.git@main#egg=custom_logger
