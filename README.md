@@ -10,17 +10,20 @@ You can install Custom Logger Wrapper using `pip`. To install the package, run t
 pip3 install git+https://github.com/SPHTech-Data/mlops-custom-logger.git@main#egg=custom_logger
 
 ```
-This package requires "pytz". Hence please add following in requirements.txt 
+Add following is snippet if we are using in requirements.txt 
 
 ```
-pytz
 git+https://github.com/SPHTech-Data/mlops-custom-logger.git@main#egg=custom_logger
 
 ```
+
+This custom logger uses pytz package as dependency - Please add pytz in the requirements.txt
+
 Here is the format
 
 Git over SSH:
 pip install git+git@github.com:username/repo.git@branch_or_commit#egg=package_name
+
 Git over HTTPS:
 pip install git+https://github.com/username/repo.git@branch_or_commit#egg=package_name
 
@@ -44,8 +47,23 @@ logger.error("This is an error message.")
 logger.critical("This is a critical message.")
 
 ## Example log output
-2023-08-07 11:53:29 - custom_logger - ERROR    - test.main - This is a debug message
-2023-08-07 11:53:29 - custom_logger - DEBUG    - test.main - This is a debug message
-2023-08-07 11:53:29 - custom_logger - INFO     - test.main - This is an info message
-2023-08-07 11:53:29 - custom_logger - WARNING  - test.main - This is a warning message
+2023-08-07 11:53:29 - ERROR    - test.main - This is a debug message
+2023-08-07 11:53:29 - DEBUG    - test.main - This is a debug message
+2023-08-07 11:53:29 - INFO     - test.main - This is an info message
+2023-08-07 11:53:29 - WARNING  - test.main - This is a warning message
+
+## Brief description of custom logging format
+format="%(asctime)s - %(levelname)-8s - %(module)s.%(funcName)s - %(message)s"
+
+```
+%(asctime)s: This placeholder is replaced with the current SGT timestamp when a log message is emitted. The s stands for "string," and the asctime represents the human-readable timestamp of the log message.
+
+%(levelname)s: This placeholder is replaced with the log level name (e.g., DEBUG, INFO, WARNING, ERROR, CRITICAL) of the log message.
+
+%(module)s: This placeholder is replaced with the name of the Python module where the log message was emitted.
+
+%(funcName)s: This placeholder is replaced with the name of the Python function where the log message was emitted.
+
+%(message)s: This placeholder is replaced with the actual log message content.
+```
 

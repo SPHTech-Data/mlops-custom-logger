@@ -8,7 +8,7 @@ logging.Formatter.converter = lambda *args: datetime.now(tz=pytz.timezone("Asia/
 # Set up the logger configuration and format
 logging.basicConfig(
     level=logging.DEBUG, 
-    format="%(asctime)s - %(name)s - %(levelname)-8s - %(module)s.%(funcName)s - %(message)s",
+    format="%(asctime)s - %(levelname)-8s - %(module)s.%(funcName)s - %(message)s",
     datefmt="%Y-%m-%d %H:%M:%S",
 )
 
