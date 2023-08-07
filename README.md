@@ -55,8 +55,8 @@ logger.critical("This is a critical message.")
 ## Brief description of custom logging format
 format="%(asctime)s - %(levelname)-8s - %(module)s.%(funcName)s - %(message)s"
 
-```
-%(asctime)s: This placeholder is replaced with the current SGT timestamp when a log message is emitted. The s stands for "string," and the asctime represents the human-readable timestamp of the log message.
+%(asctime)s: This placeholder is replaced with the current SGT timestamp when a log message is emitted.
+ The s stands for "string," and the asctime represents the human-readable timestamp of the log message.
 
 %(levelname)s: This placeholder is replaced with the log level name (e.g., DEBUG, INFO, WARNING, ERROR, CRITICAL) of the log message.
 
@@ -65,5 +65,5 @@ format="%(asctime)s - %(levelname)-8s - %(module)s.%(funcName)s - %(message)s"
 %(funcName)s: This placeholder is replaced with the name of the Python function where the log message was emitted.
 
 %(message)s: This placeholder is replaced with the actual log message content.
-```
+
 
