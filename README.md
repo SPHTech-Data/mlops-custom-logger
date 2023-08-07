@@ -6,7 +6,23 @@ Custom Logger Wrapper is a Python package that provides a simple and convenient 
 
 You can install Custom Logger Wrapper using `pip`. To install the package, run the following command:
 
+```
+pip3 install git+https://github.com/SPHTech-Data/mlops-custom-logger.git@main#egg=custom_logger
 
+```
+This package requires "pytz". Hence please add following in requirements.txt 
+
+```
+pytz
+git+https://github.com/SPHTech-Data/mlops-custom-logger.git@main#egg=custom_logger
+
+```
+Here is the format
+
+Git over SSH:
+pip install git+git@github.com:username/repo.git@branch_or_commit#egg=package_name
+Git over HTTPS:
+pip install git+https://github.com/username/repo.git@branch_or_commit#egg=package_name
 
 ## Usage
 
