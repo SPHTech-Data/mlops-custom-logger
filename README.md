@@ -17,7 +17,7 @@ git+https://github.com/SPHTech-Data/mlops-custom-logger.git@main#egg=custom_logg
 
 ```
 
-This custom logger uses pytz package as dependency - Please add pytz in the requirements.txt
+This custom logger uses pytz package as dependency - This dependancy automatically added.
 
 Here is the format
 
@@ -35,22 +35,30 @@ After installing the package, you can use the custom logger in your Python modul
 
 ```python
 import custom_logger
-
 # The logger is already set up with the desired configuration.
-logger = custom_logger.logger
+logger = custom_logger.setup_custom_logger("custom_logger")
 
-# Logging messages
-logger.debug("This is a debug message.")
-logger.info("This is an info message.")
-logger.warning("This is a warning message.")
-logger.error("This is an error message.")
-logger.critical("This is a critical message.")
+def main():
+    # Logging messages
+    logger.debug("This is a debug message")
+    logger.info("This is an info message")
+    logger.warning("This is a warning message")
+    logger.error("This is an error message")
+    logger.critical("This is a critical message")
+
+if __name__ == "__main__":
+    main()
 
 ## Example log output
-2023-08-07 11:53:29 - ERROR    - test.main - This is a debug message
-2023-08-07 11:53:29 - DEBUG    - test.main - This is a debug message
-2023-08-07 11:53:29 - INFO     - test.main - This is an info message
-2023-08-07 11:53:29 - WARNING  - test.main - This is a warning message
+2023-08-08 13:25:41 - DEBUG    - test.main - This is a debug message
+2023-08-08 13:25:41 - INFO     - test.main - This is an info message
+2023-08-08 13:25:41 - WARNING  - test.main - This is a warning message
+2023-08-08 13:25:41 - ERROR    - test.main - This is an error message
+2023-08-08 13:25:41 - CRITICAL - test.main - This is a critical message
+
+## Log level
+"The default log level is set to 'Debug,' allowing it to display logs of all levels. 
+To limit the display to only 'Error' logs, you can export the log level by using the command 'export log_level=error'."
 
 ## Brief description of custom logging format
 format="%(asctime)s - %(levelname)-8s - %(module)s.%(funcName)s - %(message)s"
