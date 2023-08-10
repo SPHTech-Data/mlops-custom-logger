@@ -25,7 +25,7 @@ Git over SSH:
 pip install git+ssh://git@github.com/SPHTech-Data/mlops-custom-logger.git@main#egg=custom_logger
 
 Git over HTTPS:
-pip install git+https://github.com/username/repo.git@branch_or_commit#egg=package_name
+pip install git+https://github.com/SPHTech-Data/mlops-custom-logger.git@main#egg=custom_logger
 
 ## Usage
 
