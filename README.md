@@ -1,8 +1,38 @@
 # Custom Logger Wrapper
 
 Custom Logger Wrapper is a Python package that provides a simple and convenient way to set up a custom logging configuration in your Python projects. It allows you to configure logging with a specific time zone and a pre-defined log format, making it easy to use across different modules in your project.
-
 ## Installation
+
+Download this as submodule to your project and import custom_logger - Please following below commands.
+
+```
+git submodule add git@github.com:SPHTech-Data/mlops-custom-logger.git custom_logger
+
+```
+Following code to add within your app.py 
+## Example
+```
+import sys
+import os
+current_dir = os.path.dirname(os.path.abspath(__file__))
+parent_dir = os.path.abspath(os.path.join(current_dir, '..'))
+sys.path.append(parent_dir)
+
+from custom_logger.logger import setup_custom_logger
+logger = setup_custom_logger("logger")
+
+app = Flask(__name__)
+@app.route('/')
+def home():
+    logger.debug('Received request for home page')
+    return "Welcome to the home page!"
+
+@app.route('/demo')
+def demo():
+    logger.info('Received request for Flask Demo app')
+    return "Flask Demo application is up and running!"
+
+```
 
 You can install Custom Logger Wrapper using `pip`. To install the package, run the following command:
 
@@ -36,7 +66,7 @@ After installing the package, you can use the custom logger in your Python modul
 ```python
 import custom_logger
 # The logger is already set up with the desired configuration.
-logger = custom_logger.setup_custom_logger("custom_logger")
+logger = custom_logger.setup_custom_logger("logger")
 
 def main():
     # Logging messages
