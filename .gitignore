@@ -1,0 +1,9 @@
+# Ignore custom_logger build artifacts
+custom_logger.egg-info/
+dist/
+
+# Ignore compiled Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+
