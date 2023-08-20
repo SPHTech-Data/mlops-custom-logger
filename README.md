@@ -18,8 +18,8 @@ current_dir = os.path.dirname(os.path.abspath(__file__))
 parent_dir = os.path.abspath(os.path.join(current_dir, '..'))
 sys.path.append(parent_dir)
 
-from custom_logger.logger import setup_custom_logger
-logger = setup_custom_logger("logger")
+from custom_logger.logger import get_logger
+logger = get_logger("logger", "ERROR")
 
 app = Flask(__name__)
 @app.route('/')
@@ -65,8 +65,8 @@ After installing the package, you can use the custom logger in your Python modul
 
 ```python
 import custom_logger
-# The logger is already set up with the desired configuration.
-logger = custom_logger.setup_custom_logger("logger")
+# The logger is already set up with the desired configuration, default log-level is "DEBUG"
+logger = custom_logger.get_logger(__name__, "ERROR")
 
 def main():
     # Logging messages
