@@ -5,7 +5,7 @@ from datetime import datetime
 # Set the logging module's time zone to Singapoer Time (SGT)
 logging.Formatter.converter = lambda *args: datetime.now(tz=pytz.timezone("Asia/Singapore")).timetuple()
 
-def setup_logger(name, log_level="DEBUG"):
+def get_logger(name, log_level="DEBUG"):
     logger = logging.getLogger(name)
 
     # Set up the logger configuration and format
