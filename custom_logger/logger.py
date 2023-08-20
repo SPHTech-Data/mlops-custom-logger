@@ -11,7 +11,7 @@ def get_logger(name, log_level="DEBUG"):
     # Set up the logger configuration and format
     logging.basicConfig(
         level=logging.DEBUG,
-        format="%(asctime)s - %(levelname)-8s - %(module)s.%(funcName)s - %(message)s",
+        format="%(levelname)s: %(asctime)s - %(module)s.%(funcName)s - %(message)s",
         datefmt="%Y-%m-%d %H:%M:%S",
     )
     
