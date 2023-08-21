@@ -10,7 +10,8 @@ Custom Logger Wrapper is a Python package that provides a simple and convenient 
     * This custom logger uses pytz package as a dependency - This dependancy is automatically added.
 
     import custom_logger as logger
-    # Default logger level is "DEBUG"
+
+    # Default log level is "DEBUG", you can set as per requirement
     logger.get_logger('__mylogger__', 'ERROR')
     logger.error("Hello World!")
 
