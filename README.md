@@ -26,7 +26,7 @@ Custom Logger Wrapper is a Python package that provides a simple and convenient 
 ### Logging format description
     format="%(levelname)s: %(asctime)s - %(module)s.%(funcName)s - %(message)s"
 
-    levelname: Log leven name (e.g., DEBUG, INFO, WARNING, ERROR, CRITICAL)
+    levelname: Log level name (e.g., DEBUG, INFO, WARNING, ERROR, CRITICAL)
     asctime: Current SGT timestamp when a log message is emitted.
     module: Python module name where the log message was emitted.
     funcName: Python function where the log message was emitted.
