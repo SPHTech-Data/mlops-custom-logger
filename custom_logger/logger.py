@@ -19,9 +19,9 @@ def get_logger(name, log_level="DEBUG"):
     Returns:
         logging.Logger: The logger with the specified name and log level.
     """
-    
+
     # Validate the logger name, it can not be None
-    if name is None:
+    if name is None and name == "":
         raise ValueError("Logger name can not be None")
     logger = logging.getLogger(name)
 
