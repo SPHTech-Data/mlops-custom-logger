@@ -6,6 +6,23 @@ from datetime import datetime
 logging.Formatter.converter = lambda *args: datetime.now(tz=pytz.timezone("Asia/Singapore")).timetuple()
 
 def get_logger(name, log_level="DEBUG"):
+    """ get_logger returns a logger with the specified name and log level.
+    The log level defaults to DEBUG if not specified.
+
+    Args:
+        name (str): The name of the logger
+        log_level (str, optional): The log level. Defaults to "DEBUG".
+
+    Raises:
+        ValueError: Raised if the name is None or the log level is invalid.
+
+    Returns:
+        logging.Logger: The logger with the specified name and log level.
+    """
+    
+    # Validate the logger name, it can not be None
+    if name is None:
+        raise ValueError("Logger name can not be None")
     logger = logging.getLogger(name)
 
     # Validate the log level, any invalid log level will raise a ValueError
