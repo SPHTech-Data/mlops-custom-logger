@@ -2,9 +2,17 @@
 
 Custom Logger Wrapper is a Python package that provides a simple and convenient way to set up a custom logging configuration in your Python projects. It allows you to configure logging with a specific time zone and a pre-defined log format, making it easy to use across different modules in your project.
 
-### Installation
-    git+https://github.com/SPHTech-Data/mlops-custom-logger.git@main#egg=custom_logger
+### Installation 
+#### Using SSH and CI process
+Add below line in the requirements.txt
+```
     
+    git+ssh://git@github.com/SPHTech-Data/mlops-custom-logger.git@main#egg=custom_logger
+```
+#### Using HTTPS for local testing
+```    
+    git+https://github.com/SPHTech-Data/mlops-custom-logger.git@main#egg=custom_logger
+```   
 ### Example
 ```
     * This custom logger uses pytz package as a dependency - This dependancy is automatically added.
