@@ -40,6 +40,5 @@ def get_logger(name, log_level="DEBUG"):
         datefmt="%Y-%m-%d %H:%M:%S",
     )
     
-    logger.setLevel(logging.getLevelName(log_level))
     return logger
 #end def
